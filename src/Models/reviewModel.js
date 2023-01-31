@@ -6,18 +6,15 @@ const reviewschema = new mongoose.Schema(
         type:ObjectId,
         required: true 
         },
-
     reviewedBy: {
       type: String,
       required: true,
       default: "Guest"
     },
-
     reviewedAt: { 
         type:Date,
         required:true 
     },
-    
     rating: { 
     type: Number, 
     required: true,
@@ -34,6 +31,6 @@ const reviewschema = new mongoose.Schema(
     }
   },
   { timestamps: true }
-); // createdAt, updatedAt
+); 
 
 module.exports = mongoose.model("review", reviewschema);

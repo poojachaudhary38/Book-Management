@@ -25,7 +25,6 @@ let uploadFile= async ( file) =>{
       Body: file.buffer
   }
 
-
   s3.upload( uploadParams, function (err, data ){
       if(err) {
           return reject({"error": err})
@@ -114,8 +113,6 @@ const createBook = async function (req, res) {
     }
 }
 
-
-
 //Get All Books
 const getAllBooks = async function (req, res) {
     try {
@@ -177,7 +174,6 @@ const getAllBooks = async function (req, res) {
       return res.status(500).send({ status: false, message: err.message });
     }
   };
-
 
   const deleteBookBYId = async function (req, res) {
 
